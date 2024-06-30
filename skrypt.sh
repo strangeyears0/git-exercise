@@ -13,6 +13,12 @@ case "$1" in
       echo "File number $i created by skrypt.sh on $(date)" > "log_$i.txt"
     done
     ;;
+  --help)
+    echo "Available options:"
+    echo "--date       Show current date"
+    echo "--logs [num] Create log files"
+    echo "--help       Show this help message"
+    ;;
   *)
     echo "Unknown option: $1"
     ;;
