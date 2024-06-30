@@ -1,9 +1,9 @@
 #!/bin/bash
 case "$1" in
-  --date)
+  --date|-d)
     date
     ;;
-  --logs)
+  --logs|-l)
     if [ -z "$2" ]; then
       num=100
     else
@@ -13,11 +13,11 @@ case "$1" in
       echo "File number $i created by skrypt.sh on $(date)" > "log_$i.txt"
     done
     ;;
-  --help)
+  --help|-h)
     echo "Available options:"
-    echo "--date       Show current date"
-    echo "--logs [num] Create log files"
-    echo "--help       Show this help message"
+    echo "--date, -d       Show current date"
+    echo "--logs, -l [num] Create log files"
+    echo "--help, -h       Show this help message"
     ;;
   *)
     echo "Unknown option: $1"
